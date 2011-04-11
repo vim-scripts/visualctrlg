@@ -2,7 +2,7 @@
 
 Author:
   tyru <tyru.exe@gmail.com>
-Version: 0.0.0
+Version: 0.0.1
 License:
 " NEW BSD LICENSE {{{
 "   Copyright (c) 2011, tyru
@@ -23,6 +23,7 @@ CONTENTS						*visualctrlg-contents*
 Introduction		|visualctrlg-introduction|
 Interface			|visualctrlg-interface|
   Keymappings		|visualctrlg-keymappings|
+  Variables			|visualctrlg-variables|
 Changelog			|visualctrlg-changelog|
 
 
@@ -51,6 +52,18 @@ Default keymappings
 <C-g>		<Plug>(visualctrlg-briefly)
 g<C-g>		<Plug>(visualctrlg-verbosely)
 
+These get setup using: >
+	silent! vmap <unique> g<C-g> <Plug>(visualctrlg-verbosely)
+	silent! vmap <unique> <C-g>  <Plug>(visualctrlg-briefly)
+}}}
+------------------------------------------------------------------------------
+VARIABLES				*visualctrlg-variables* {{{
+
+					*g:visualctrlg_no_default_keymappings*
+g:visualctrlg_no_default_keymappings
+	If this variable is defined and non-zero,
+	|visualctrlg| will not define default keymappings.
+
 }}}
 }}}
 ==============================================================================
@@ -58,6 +71,10 @@ CHANGELOG						*visualctrlg-changelog* {{{
 
 0.0.0:
 - Initial upload
+0.0.1:
+- fix a minor bug
+- add the description about g:visualctrlg_no_default_keymappings.
+- add the description about how default mappings get applied. (Thanks blueyed)
 
 }}}
 ==============================================================================
